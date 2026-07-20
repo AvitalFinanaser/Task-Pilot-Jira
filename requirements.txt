@@ -1,0 +1,11 @@
+# requirements.txt
+openai-agents
+pydantic
+pyyaml
+python-dotenv
+jira
+agents
+requests
+pytest
+isort
+pytest-asyncio

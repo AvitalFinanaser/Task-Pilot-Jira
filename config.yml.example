@@ -1,0 +1,6 @@
+agents:
+  model: "{model-name}"
+jira:
+  url_rest_api: "https://{user-name}.atlassian.net/rest/api/3/"
+  user: "{email-user}@{gmail/else}.com"
+  request_timeout: {timeout-in-seconds}

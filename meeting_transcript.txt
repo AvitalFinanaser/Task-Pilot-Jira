@@ -1,0 +1,9 @@
+Alright team, let's jump into the TaskPilot status sync for the TEST project. We really need to get the GenAI readiness stuff deployed, but we have some annoying bugs blocking us.
+
+The integration test client is crashing with a FileNotFoundError because the settings parser is looking in the wrong directory level and missing the project root parent. Someone needs to refactor the config parser to resolve paths absolutely from the project root directory. We need this absolute path fix wrapped up by tomorrow morning as it's blocking the deployment pipeline. Mark it as High priority. I can take ownership of that absolute path fix and get it sorted.
+
+The logic itself for the orchestration layer is fine, but there are import issues where it cannot find references in the init file. We need to re-architect local_agents/__init__.py to export the base class and add the __all__ list properly to clear up those package visibility problems. Let's make sure a pull request is ready by Tuesday for review.
+
+We also need a utility tool to actually read these text files before we push them to the OpenAI SDK. We should build a load_meeting_transcript_txt function using pathlib and make sure it explicitly uses utf-8 encoding so it handles text files smoothly.
+
+Sounds like a plan. Let's wrap this up, get these items logged, and get to work.
